@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Estética - Beleza e Bem-Estar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .service-card {
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .testimonial-slider {
+            display: flex;
+            overflow: hidden;
+        }
+        .testimonial-slide {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">
+                <i class="fas fa-spa text-pink-500 mr-2"></i> Estética Viva
+            </div>
+            <ul class="hidden md:flex space-x-6 text-gray-600">
+                <li><a href="#sobre" class="hover:text-pink-500 hover:border-b-2 border-pink-500 pb-1 transition">Sobre Nós</a></li>
+                <li><a href="#servicos" class="hover:text-pink-500 hover:border-b-2 border-pink-500 pb-1 transition">Serviços</a></li>
+                <li><a href="#equipe" class="hover:text-pink-500 hover:border-b-2 border-pink-500 pb-1 transition">Equipe</a></li>
+                <li><a href="#contato" class="hover:text-pink-500 hover:border-b-2 border-pink-500 pb-1 transition">Contato</a></li>
+            </ul>
+            <button id="menu-toggle" class="md:hidden text-gray-600">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
+            <ul class="py-4 px-4 space-y-2 text-gray-600">
+                <li><a href="#sobre" class="block hover:text-pink-500">Sobre Nós</a></li>
+                <li><a href="#servicos" class="block hover:text-pink-500">Serviços</a></li>
+                <li><a href="#equipe" class="block hover:text-pink-500">Equipe</a></li>
+                <li><a href="#contato" class="block hover:text-pink-500">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-32 relative">
+        <div class="container mx-auto px-4 text-center fade-in" style="animation-delay: 0.5s">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Transforme sua Beleza</h1>
+            <p class="text-xl md:text-2xl mb-8">Tratamentos estéticos personalizados para saúde e bem-estar, realizados por profissionais experientes.</p>
+            <a href="#contato" class="bg-pink-500 hover:bg-pink-600 px-8 py-4 rounded-full text-lg font-semibold transition duration-300">Agende Sua Consulta</a>
+        </div>
+        <div class="absolute bottom-0 w-full">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2f6304ba-4043-4a38-968d-955f5eae2339.png" alt="Vista panorâmica de um spa luxuoso com ambientes relaxantes, cadeiras de massagem e luzes suaves azuis e violetas criando uma atmosfera serena e elegante, com detalhes de vidro e madeira polida refletindo luzes" class="w-full object-cover" />
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Sobre Nós</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/52a6f2e9-1ed8-4361-a659-da676a3f00b8.png" alt="Interior de uma clínica de estética moderna com equipe profissional aplicando cuidados faciais em um cliente, salas limpas e brancas com equipamentos de alta tecnologia, iluminação natural suave e decorações minimalistas em tons pastel" class="rounded-lg shadow-lg" />
+                </div>
+                <div class="md:w-1/2 md:ml-12">
+                    <p class="text-lg text-gray-700 mb-6">Na Estética Viva, acreditamos que a beleza vem de dentro. Oferecemos uma gama completa de tratamentos estéticos não invasivos, utilizando tecnologias de ponta e produtos premium para realçar sua autoestima e saúde.</p>
+                    <p class="text-lg text-gray-700">Nossa missão é proporcionar experiências personalizadas que cuidam não apenas da aparência, mas também do bem-estar emocional e físico de nossos clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-100 p-6 rounded-lg text-center shadow-md">
+                    <i class="fas fa-facemask text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Tratamentos Faciais</h3>
+                    <p class="text-gray-700">Limpeza profunda, peeling e hidratação para uma pele radiante e saudável.</p>
+                </div>
+                <div class="service-card bg-gray-100 p-6 rounded-lg text-center shadow-md">
+                    <i class="fas fa-hands text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Massagens Corporais</h3>
+                    <p class="text-gray-700">Relaxamento muscular e melhoria da circulação com técnicas especializadas.</p>
+                </div>
+                <div class="service-card bg-gray-100 p-6 rounded-lg text-center shadow-md">
+                    <i class="fas fa-weight text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Emagrecimento e Celulite</h3>
+                    <p class="text-gray-700">Procedimentos modernos para redução de medidas e combate à celulite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section id="equipe" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Nossa Equipe</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/130a0965-6809-4c46-9b97-4d84662db9ee.png" alt="Professor de estética feminina com uniforme branco, sorriso profissional, cabelos castanhos ondulados, fundo neutro em clínica limpa, iluminação suave" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold">Dr. Ana Silva</h3>
+                    <p class="text-gray-600">Especialista em Dermatologia</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2143d46c-7e3b-423d-a970-a08640a107bc.png" alt="Esteticista masculino com abrigo azul, expressão confiante, cabelos curtos pretos, fundo de sala de tratamento médica, luz refletida em equipamentos" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold">Carlos Mendes</h3>
+                    <p class="text-gray-600">Especialista em Massagens</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5762fe18-4e58-4608-9581-97cf703e5503.png" alt="Especialista em nutrição feminina com blazer bege, gafas finas, sorriso acolhedor, fundo de consultório com plantas, iluminação natural" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-xl font-semibold">Marina Lima</h3>
+                    <p class="text-gray-600">Nutricionista Estética</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">O que Nossos Clientes Dizem</h2>
+            <div id="testimonial-slider" class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c24d2e56-ab53-4b45-9d02-65c625fefd20.png" alt="Cliente satisfeita feminina com cabelos loiros presos, sorriso radiante, fundo neutro, representando felicidade após tratamento estético" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                        <p class="text-lg text-gray-700 italic mb-4">"Excelente atendimento e resultados surpreendentes! Minha pele nunca esteve tão bonita."</p>
+                        <p class="font-semibold">João Silva</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/11deccf6-ad2b-4805-9adf-2c8369839588.png" alt="Cliente masculino satisfeito com barba arrumada, expressão relaxada, fundo acolhedor, simbolizando bem-estar após sessão de massagem" class="w-24 h-24 rounded-full mx-auto mb-4" />
+                        <p class="text-lg text-gray-700 italic mb-4">"As massagens são incríveis. Sinto-me rejuvenescido após cada visita."</p>
+                        <p class="font-semibold">Maria Santos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-8">
+                <button id="prev-testimonial" class="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-l mr-2"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-testimonial" class="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-r"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Entre em Contato</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:mr-12">
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <input type="text" id="name" placeholder="Seu Nome" class="w-full p-3 border rounded-md" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" id="email" placeholder="Seu E-mail" class="w-full p-3 border rounded-md" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea id="message" rows="5" placeholder="Sua Mensagem" class="w-full p-3 border rounded-md" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-pink-500 hover:bg-pink-600 px-6 py-3 rounded-md text-white font-semibold transition">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="mb-6">
+                        <i class="fas fa-map-marker-alt text-2xl text-pink-500 mr-2"></i>
+                        <span class="text-lg">Rua da Beleza, 123 - São Paulo, SP</span>
+                    </div>
+                    <div class="mb-6">
+                        <i class="fas fa-phone text-2xl text-pink-500 mr-2"></i>
+                        <span class="text-lg">(11) 99999-9999</span>
+                    </div>
+                    <div class="mb-6">
+                        <i class="fas fa-envelope text-2xl text-pink-500 mr-2"></i>
+                        <span class="text-lg">contato@estheticaviva.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Estética Viva. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Testimonial slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.transform = `translateX(-${index * 100}%)`);
+        }
+
+        document.getElementById('next-testimonial').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('prev-testimonial').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                alert('Por favor, insira um e-mail válido.');
+                return;
+            }
+
+            alert('Obrigado! Sua mensagem foi enviada com sucesso.');
+            // Here you could add code to actually send the form data
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
